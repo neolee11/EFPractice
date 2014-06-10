@@ -5,6 +5,10 @@ VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFPractice.Web", "EFPractice\EFPractice.Web.csproj", "{D747B55E-3E7F-4500-9142-E9BB8DD14394}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFPractice.Domain", "EFPractice.Domain\EFPractice.Domain.csproj", "{589B8E5E-32C1-48F5-A8F6-429A63019817}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFPractice.DataLayer", "EFPractice.DataLayer\EFPractice.DataLayer.csproj", "{22EC3B7E-4FB8-4DD5-B0F0-51BCFF4B7267}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{D747B55E-3E7F-4500-9142-E9BB8DD14394}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D747B55E-3E7F-4500-9142-E9BB8DD14394}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D747B55E-3E7F-4500-9142-E9BB8DD14394}.Release|Any CPU.Build.0 = Release|Any CPU
+		{589B8E5E-32C1-48F5-A8F6-429A63019817}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{589B8E5E-32C1-48F5-A8F6-429A63019817}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{589B8E5E-32C1-48F5-A8F6-429A63019817}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{589B8E5E-32C1-48F5-A8F6-429A63019817}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22EC3B7E-4FB8-4DD5-B0F0-51BCFF4B7267}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22EC3B7E-4FB8-4DD5-B0F0-51BCFF4B7267}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22EC3B7E-4FB8-4DD5-B0F0-51BCFF4B7267}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22EC3B7E-4FB8-4DD5-B0F0-51BCFF4B7267}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
