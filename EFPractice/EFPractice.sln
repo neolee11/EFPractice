@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFPractice.Domain", "EFPrac
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFPractice.DataLayer", "EFPractice.DataLayer\EFPractice.DataLayer.csproj", "{22EC3B7E-4FB8-4DD5-B0F0-51BCFF4B7267}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFPractice.ConsoleApp", "EFPractice.ConsoleApp\EFPractice.ConsoleApp.csproj", "{F95F5321-18C4-42F9-AC4A-3B7F1ADB46EF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{22EC3B7E-4FB8-4DD5-B0F0-51BCFF4B7267}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{22EC3B7E-4FB8-4DD5-B0F0-51BCFF4B7267}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{22EC3B7E-4FB8-4DD5-B0F0-51BCFF4B7267}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F95F5321-18C4-42F9-AC4A-3B7F1ADB46EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F95F5321-18C4-42F9-AC4A-3B7F1ADB46EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F95F5321-18C4-42F9-AC4A-3B7F1ADB46EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F95F5321-18C4-42F9-AC4A-3B7F1ADB46EF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
