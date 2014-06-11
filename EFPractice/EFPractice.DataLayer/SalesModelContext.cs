@@ -1,5 +1,6 @@
 ﻿using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration;
+using System.Linq;
 using EFPractice.Domain;
 
 namespace EFPractice.DataLayer
@@ -29,7 +30,18 @@ namespace EFPractice.DataLayer
 
             base.OnModelCreating(modelBuilder);
         }
+
+        public override int SaveChanges()
+        {
+            //foreach (var VARIABLE in this.ChangeTracker.Entries().Where(e => e.))
+            //{
+                
+            //}
+            return base.SaveChanges();
+        }
     }
+
+
 
     public class ContactDetailMappings : EntityTypeConfiguration<ContactDetail>
     {
