@@ -18,3 +18,8 @@ Fluent API to create relationship
 	Example: 
 	ContactDetail (HasRequired) Customer (WithOptional) ContactDetail
 	Customer (HasOptional) ContactDetail (WithRequired) Customer
+
+Misc:
+1. Use virtual to make property lazy load or let context track your changes
+2. Solve disconnected db problem by using foreign key
+3. Use context.Entity<>.Load to load entity after it's already loaded in the memory
