@@ -1,6 +1,7 @@
 ﻿using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration;
 using System.Linq;
+using EFPractice.DataLayer.Migrations;
 using EFPractice.Domain;
 
 namespace EFPractice.DataLayer
@@ -9,7 +10,10 @@ namespace EFPractice.DataLayer
     {
         public SalesModelContext()
             : base("name=MyLocalSQLServer")
-        {}
+        {
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<SalesModelContext, Configuration>());
+            //Database.SetInitializer(new DropCreateDatabaseAlways<SalesModelContext>());
+        }
 
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Order> Orders { get; set; }

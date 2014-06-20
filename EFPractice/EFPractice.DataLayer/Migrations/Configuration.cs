@@ -14,7 +14,7 @@ namespace EFPractice.DataLayer.Migrations
         {
             AutomaticMigrationsEnabled = true;
             AutomaticMigrationDataLossAllowed = true;
-            
+
             ContextKey = "EFPractice.DataLayer.SalesModelContext";
         }
 
@@ -39,7 +39,7 @@ namespace EFPractice.DataLayer.Migrations
                 new Customer {FirstName = "Mike", LastName = "Woodson", DateOfBirth = new DateTime(1990, 1, 3)}
             };
 
-            context.Customers.AddOrUpdate(c => new {c.FirstName, c.LastName}, customers.ToArray());
+            context.Customers.AddOrUpdate(c => new { c.FirstName, c.LastName }, customers.ToArray());
         }
     }
 }

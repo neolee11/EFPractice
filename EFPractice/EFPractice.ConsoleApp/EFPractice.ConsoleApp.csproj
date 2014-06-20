@@ -57,6 +57,14 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\EFPractice.CoreDataLayer\EFPractice.CoreDataLayer.csproj">
+      <Project>{8C8F7D28-76AC-4695-A985-F647A3F6EB43}</Project>
+      <Name>EFPractice.CoreDataLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EFPractice.Core\EFPractice.Core.csproj">
+      <Project>{7d673512-e7ed-479c-93c4-0842a649fdd8}</Project>
+      <Name>EFPractice.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\EFPractice.DataLayer\EFPractice.DataLayer.csproj">
       <Project>{22EC3B7E-4FB8-4DD5-B0F0-51BCFF4B7267}</Project>
       <Name>EFPractice.DataLayer</Name>

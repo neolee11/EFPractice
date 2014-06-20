@@ -16,6 +16,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Notes", "Notes", "{88B66950
 		EF Creation Steps.txt = EF Creation Steps.txt
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFPractice.Core", "EFPractice.Core\EFPractice.Core.csproj", "{7D673512-E7ED-479C-93C4-0842A649FDD8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFPractice.CoreDataLayer", "EFPractice.CoreDataLayer\EFPractice.CoreDataLayer.csproj", "{8C8F7D28-76AC-4695-A985-F647A3F6EB43}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -38,6 +42,14 @@ Global
 		{F95F5321-18C4-42F9-AC4A-3B7F1ADB46EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F95F5321-18C4-42F9-AC4A-3B7F1ADB46EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F95F5321-18C4-42F9-AC4A-3B7F1ADB46EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D673512-E7ED-479C-93C4-0842A649FDD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D673512-E7ED-479C-93C4-0842A649FDD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D673512-E7ED-479C-93C4-0842A649FDD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D673512-E7ED-479C-93C4-0842A649FDD8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C8F7D28-76AC-4695-A985-F647A3F6EB43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C8F7D28-76AC-4695-A985-F647A3F6EB43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C8F7D28-76AC-4695-A985-F647A3F6EB43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C8F7D28-76AC-4695-A985-F647A3F6EB43}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
