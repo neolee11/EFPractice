@@ -60,7 +60,6 @@
     <ProjectReference Include="..\EFPractice.Core\EFPractice.Core.csproj">
       <Project>{7d673512-e7ed-479c-93c4-0842a649fdd8}</Project>
       <Name>EFPractice.Core</Name>
-      <Private>True</Private>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

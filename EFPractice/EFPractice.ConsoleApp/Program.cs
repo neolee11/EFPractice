@@ -28,6 +28,23 @@ namespace EFPractice.ConsoleApp
             Console.ReadLine();
         }
 
+        private static void InsertProduct()
+        {
+            using (var ctx = new CoreModelContext())
+            {
+                //var product1 = new EFPractice.Core.Product { SomePrimeK = 1, Name = "iPhone 5", Price = 300.00M };
+                var product1 = new EFPractice.Core.Product { Name = "iPhone 4", Price = 200.00M };
+                var product2 = new EFPractice.Core.Product { Name = "iPhone 5", Price = 300.00M };
+                var product3 = new EFPractice.Core.Product { Name = "iPhone 6", Price = 400.00M };
+
+                ctx.Products.Add(product1);
+                ctx.Products.Add(product2);
+                ctx.Products.Add(product3);
+
+                ctx.SaveChanges();
+            }
+        }
+
         private static void GetProducts()
         {
             using (var ctx = new CoreModelContext())
@@ -40,15 +57,7 @@ namespace EFPractice.ConsoleApp
             }
         }
 
-        private static void InsertProduct()
-        {
-            using (var ctx = new CoreModelContext())
-            {
-                var product = new EFPractice.Core.Product {SomePrimeK = 1, Name = "iPhone 5", Price = 300.00M};
-                ctx.Products.Add(product);
-                ctx.SaveChanges();
-            }
-        }
+
 
 
         private static void RunSalesModelContext()

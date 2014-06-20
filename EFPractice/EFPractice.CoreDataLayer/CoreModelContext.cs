@@ -17,7 +17,14 @@ namespace EFPractice.CoreDataLayer
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            //modelBuilder.HasDefaultSchema("Test");
+
             modelBuilder.Configurations.Add(new ProductMapping());
+
+            modelBuilder.Entity<Student>().Map<Student>(s => s.re)
+            
+            //modelBuilder.Entity<Product>().Property(p => p.Name).HasColumnName("Something");
+
             base.OnModelCreating(modelBuilder);
         }
     }
