@@ -21,7 +21,7 @@ namespace EFPractice.CoreDataLayer
 
             modelBuilder.Configurations.Add(new ProductMapping());
 
-            modelBuilder.Entity<Student>().Map<Student>(s => s.re)
+            //modelBuilder.Entity<Student>().Map<Student>(s => s.re)
             
             //modelBuilder.Entity<Product>().Property(p => p.Name).HasColumnName("Something");
 
