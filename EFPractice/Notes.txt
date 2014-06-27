@@ -1,0 +1,7 @@
+Good EF learning site:
+http://msdn.microsoft.com/en-us/data/ee712907
+
+Fluent API configuration
+1. Mapping properties and types http://msdn.microsoft.com/en-us/data/jj591617
+2. Mapping relationships http://msdn.microsoft.com/en-us/data/jj591620
+

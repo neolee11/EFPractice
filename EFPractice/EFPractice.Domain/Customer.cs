@@ -15,7 +15,10 @@ namespace EFPractice.Domain
         public virtual ICollection<Order> Orders
         {
             get { return _orders; }
-            set { _orders = value; }
+            set
+            {
+                _orders = value; 
+            }
         }
 
         private ICollection<Address> _addresses;

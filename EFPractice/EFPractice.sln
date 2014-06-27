@@ -14,6 +14,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Notes", "Notes", "{88B66950-2A27-4C84-9BB9-F2AB7C379725}"
 	ProjectSection(SolutionItems) = preProject
 		EF Creation Steps.txt = EF Creation Steps.txt
+		Notes.txt = Notes.txt
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFPractice.Core", "EFPractice.Core\EFPractice.Core.csproj", "{7D673512-E7ED-479C-93C4-0842A649FDD8}"
