@@ -33,7 +33,8 @@ namespace EFPractice.CoreDataLayer
             modelBuilder.Entity<OnlineCourse>().ToTable("OnlineCourse");
             modelBuilder.Entity<OnSiteCourse>().ToTable("OnsiteCourse");
 
-
+            //modelBuilder.Entity<Student>().Map<Student>(s => s.re)
+            
             modelBuilder.Configurations.Add(new InstructorMapping());
             modelBuilder.Configurations.Add(new OfficeMapping());
             modelBuilder.Configurations.Add(new AssignedParkingMapping());
