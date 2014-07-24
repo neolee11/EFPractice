@@ -5,3 +5,6 @@ Fluent API configuration
 1. Mapping properties and types http://msdn.microsoft.com/en-us/data/jj591617
 2. Mapping relationships http://msdn.microsoft.com/en-us/data/jj591620
 
+Misc:
+1. About EF Proxies: http://stackoverflow.com/questions/7111109/should-i-enable-or-disable-dynamic-proxies-with-entity-framework-4-1-and-mvc3
+   - Make all properties virtual to have proxies for change tracking

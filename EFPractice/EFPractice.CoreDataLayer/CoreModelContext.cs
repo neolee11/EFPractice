@@ -1,4 +1,5 @@
-﻿using System.Data.Entity;
+﻿using System;
+using System.Data.Entity;
 using System.Data.Entity.Core.Metadata.Edm;
 using System.Data.Entity.ModelConfiguration;
 using System.Data.Entity.ModelConfiguration.Configuration;
@@ -21,7 +22,9 @@ namespace EFPractice.CoreDataLayer
             : base("EFCoreConnStr")
         {
             //Database.SetInitializer(new MigrateDatabaseToLatestVersion<SalesModelContext, Configuration>());
-            Database.SetInitializer(new DropCreateDatabaseAlways<CoreModelContext>());
+            //Database.SetInitializer(new DropCreateDatabaseAlways<CoreModelContext>());
+            //Database.SetInitializer(new DropCreateDatabaseIfModelChanges<CoreModelContext>());
+            Database.SetInitializer(new MyDropCreateDatabaseIfModelChangesInitializer());
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -29,6 +32,7 @@ namespace EFPractice.CoreDataLayer
             //modelBuilder.HasDefaultSchema("Test");
             //modelBuilder.Configurations.Add(new ProductMapping());
 
+            //Using Table-Per-Type Mapping
             modelBuilder.Entity<Course>().ToTable("Course");
             modelBuilder.Entity<OnlineCourse>().ToTable("OnlineCourse");
             modelBuilder.Entity<OnSiteCourse>().ToTable("OnsiteCourse");
@@ -41,6 +45,28 @@ namespace EFPractice.CoreDataLayer
 
             base.OnModelCreating(modelBuilder);
         }
+
+    }
+
+
+    public class MyDropCreateDatabaseAlwaysInitializer : DropCreateDatabaseAlways<CoreModelContext>
+    {
+        protected override void Seed(CoreModelContext context)
+        {
+            var department = new Department() {Name = "Computer Science", Budget = 1000000.00m, StartDate = new DateTime(1990, 1, 1)};
+            context.Departments.Add(department);
+            base.Seed(context);
+        }
+    }
+
+    public class MyDropCreateDatabaseIfModelChangesInitializer : DropCreateDatabaseIfModelChanges<CoreModelContext>
+    {
+        protected override void Seed(CoreModelContext context)
+        {
+            var department = new Department() { Name = "Computer Science", Budget = 1000000.00m, StartDate = new DateTime(1990, 1, 1) };
+            context.Departments.Add(department);
+            base.Seed(context);
+        }
     }
 
     public class InstructorMapping : EntityTypeConfiguration<Instructor>
@@ -48,6 +74,8 @@ namespace EFPractice.CoreDataLayer
         public InstructorMapping()
         {
             this.HasKey(i => i.Id);
+            this.Property(i => i.FirstName).HasMaxLength(50);
+            this.Property(i => i.LastName).HasMaxLength(50);
 
             this.HasMany(i => i.Courses).WithMany(c => c.Instructors).Map(
                 m =>
@@ -57,6 +85,7 @@ namespace EFPractice.CoreDataLayer
                     m.MapRightKey("CourseId"); // course
                 }
                 );
+            
         }
     }
 
@@ -66,6 +95,7 @@ namespace EFPractice.CoreDataLayer
         {
             this.HasKey(o => o.InstructorId);
             this.HasRequired(o => o.Instructor).WithRequiredPrincipal(i => i.Office); //Instructor <-> Office:  1 to 1 relationship 
+            this.Property(o => o.Timestamp).IsRowVersion();
         }
     }
 
@@ -75,6 +105,14 @@ namespace EFPractice.CoreDataLayer
         {
             this.HasKey(p => p.InstructorId);
             this.HasRequired(p => p.Instructor).WithOptional(i => i.AssignedParking); //Instructor <-> AssignedParking : 1 to 0/1 Relationship
+        }
+    }
+
+    public class CourseMapping : EntityTypeConfiguration<Course>
+    {
+        public CourseMapping()
+        {
+            //this.ToTable("Course");
         }
     }
 }

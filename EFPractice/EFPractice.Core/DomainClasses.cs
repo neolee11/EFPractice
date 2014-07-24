@@ -22,7 +22,7 @@ namespace EFPractice.Core
         public int DepartmentId { get; set; }
         public virtual Department Department { get; set; }
 
-        public virtual List<Instructor> Instructors { get; private set; }
+        public virtual List<Instructor> Instructors { get; set; }
 
 
         public Course()
@@ -55,7 +55,7 @@ namespace EFPractice.Core
         public string LastName { get; set; }
         public EGender Gender { get; set; }
 
-        public int OfficeId { get; set; }
+        //public int OfficeId { get; set; }
         public virtual Office Office { get; set; }
 
         public int? AssignedParkingId { get; set; }
